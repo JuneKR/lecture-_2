@@ -78,13 +78,18 @@ void main(){
         char let;
         printf("Enter a letter: ");
         scanf("%c", &let);
-        if(let < 97){
-            let += 32;
+        if(let >= 65 && let <= 122){
+             if(let < 97){
+                let += 32;
+            }
+            else if(let >= 97){
+                let -= 32;
+            }
+            printf("Character is : %c \n", let);
         }
-        else if(let >= 97){
-            let -= 32;
+        else{
+            printf("Insert only character!! \n");
         }
-        printf("Character is : %c \n", let);
 
         }
         
