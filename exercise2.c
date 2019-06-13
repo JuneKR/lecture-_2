@@ -123,14 +123,18 @@ void main(){
             scanf("%d", &num3);
             if(num1 > num2){
                 max = num1;
+                min = num2;
+                if(max > num3){
+                    max = num1;
+                }
             }
             else if(num2 > num1){
                 min = num1;
                 max = num2;
-            }
-            else if(max > num3){
-                if(min > num3){
+                if(max > num3){
                     min = num3;
+                } else{
+                    max = num3;
                 }
             }
             printf("Max num is : %d, Min num is : %d",max,min);
